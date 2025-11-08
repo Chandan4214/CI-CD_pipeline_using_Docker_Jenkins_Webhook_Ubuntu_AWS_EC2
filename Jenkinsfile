@@ -3,7 +3,7 @@ pipeline{
     environment {
       CONTAINER_NAME = "nestjs_app"
       IMAGE_NAME = "nestjs_image"
-      EMAIL="cks762585@gmail.com"
+      EMAIL="cs762585@gmail.com"
       PORT=3000
     }
 
@@ -35,15 +35,15 @@ pipeline{
             '''
           }
         }
-        // stage('send email notification'){
-        //   steps{
-        //     emailtext(
-        //       subject: "Deployment Successful: NestJS Application is Live",
-        //       body: "Your NestJS application is live at http://13.200.19.42:$PORT",
-        //       to: "$EMAIL"
-        //     )
-        //   }
-        // }  
+        stage('send email notification'){
+          steps{
+            emailtext(
+              subject: "Deployment Successful: NestJS Application is Live",
+              body: "Your NestJS application is live at http://13.200.19.42:$PORT",
+              to: "$EMAIL"
+            )
+          }
+        }  
 
 
     }
