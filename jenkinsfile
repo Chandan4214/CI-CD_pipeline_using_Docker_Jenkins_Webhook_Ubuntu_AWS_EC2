@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('clone repo'){
           steps{
-            git branch: "main", url:'https://github.com/Chandan4214/CI-CD_pipeline_using_Docker_Jenkins_Webhook_Ubuntu_AWS_EC2.git'
+            git branch: "main", url:'https://github.com/Chandan4214/CI-CD_pipeline_using_Docker_Jenkins_Webhook_Ubuntu_AWS_EC2'
           }
 
         }
