@@ -6,6 +6,7 @@ pipeline{
       EMAIL="cks762585@gmail.com"
       PORT=3000
     }
+    
     stages{
         stage('clone repo'){
           steps{
@@ -13,7 +14,7 @@ pipeline{
           }
 
         }
-        
+
         stage('build docker image'){
           steps{
             sh "docker build -t $IMAGE_NAME ."
